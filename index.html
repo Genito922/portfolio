@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio Analyst de données</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - N'DOUBA JEAN-CLAUDE</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">N'DOUBA MOH-ADJONLIN JEAN-CLAUDE</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">Mes Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html">Projets</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <header>
+    <nav>
+      <div class="logo">NDOUBA</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="burger">&#9776;</div>
+    </nav>
+  </header>
 
-  <!-- Contenu principal -->
-  <div class="container mt-5">
+  <section id="home" class="section">
+    <h1>Bienvenue sur mon Portfolio</h1>
+    <p>Je suis Data Analyst spécialisé en visualisation, automatisation et analyse de données.</p>
+    <a href="CV_NDOUBA_MOH_DATA_ANALYST.pdf" download class="btn">📄 Télécharger mon CV</a>
+  </section>
 
-    <!-- Introduction -->
-    <div class="text-center mb-5">
-      <h1 class="mb-3">Portfolio Analyst de données</h1>
-      <p>Bienvenue sur mon portfolio. Vous trouverez ici mes projets en analyse de données (Marketing, KPI, Python, BI...)</p>
-      <a href="file:///C:/Users/LENOVO/OneDrive/Bureau/CV_NDOUBA_MOH_DATA_ANALYST.pdf" class="btn btn-primary mt-3" download>Télécharger mon CV</a>
-    </div>
-
-    <!-- Projets -->
-    <div class="mb-5">
-      <h2>Mes Projets</h2>
-      <ul>
-        <li><a href="https://github.com/votre-utilisateur/mon-projet-powerbi" target="_blank">Web Scraping - Extraction des données de diverses sources</a></li>
+  <li><a href="https://github.com/votre-utilisateur/mon-projet-powerbi" target="_blank">Web Scraping - Extraction des données de diverses sources</a></li>
         <li><a href="https://public.tableau.com/app/profile/votre-profil" target="_blank">Data Cleaning - Nettoyage de données</a></li>
         <li><a href="https://github.com/votre-utilisateur/projet-python" target="_blank">Analyse Exploratoire des Données (EDA)</a></li>
         <li><a href="https://github.com/votre-utilisateur/projet-python" target="_blank">Sentiment Analysis - Analyse sentimentale</a></li>
         <li><a href="https://github.com/votre-utilisateur/projet-python" target="_blank">Dataviz - Visualisation des données</a></li>
 
-      </ul>
+
+  <section id="projects" class="section">
+    <h2>Mes Projets</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Analyse Exploratoire des Données (EDA)</h3>
+        <p>Exploration des indicateurs clés de ventes</p>
+        <a href="#" target="_blank">Voir le projet</a>
+      </div>
+      <div class="card">
+        <h3>Analyse RH - Tableau</h3>
+        <p>Exploration des indicateurs clés RH</p>
+        <a href="#" target="_blank">Voir le projet</a>
+      </div>
+      <div class="card">
+        <h3>Python - Web Scraping</h3>
+        <p>Extraction et nettoyage de données</p>
+        <a href="#" target="_blank">Voir le projet</a>
+      </div>
     </div>
+  </section>
 
-    <!-- Procédé -->
-    <div class="mb-5">
-      <h2>Mon Procédé</h2>
-      <ol>
-        <li><strong>Analyse des besoins :</strong> Compréhension du besoin métier via business request.</li>
-        <li><strong>Préparation :</strong> Nettoyage (SQL, Excel, Python), import sur outil BI.</li>
-        <li><strong>Visualisation :</strong> Création de dashboards adaptés.</li>
-        <li><strong>Communication :</strong> Rapport, présentation et partage.</li>
-      </ol>
-    </div>
+  <section id="about" class="section">
+    <h2>À propos</h2>
+    <p>Passionné par les données, j’aide les entreprises à transformer l’information en décisions à fort impact via la data visualisation et la modélisation.</p>
+  </section>
 
-    <!-- Contact -->
-    <div class="mb-5">
-      <h2>Contact</h2>
-      <h2>(+225) 07-48-97-78-12</h2>      
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email : ndoubajeanclaude@outlook.fr</p>
+    <p>Téléphone : (+225) 07 48 97 78 12</p>
+    <p>Adresse : Abidjab, Koumassi rue I50</p>
+    <a href="https://www.linkedin.com/in/moh-adjonlin-jean-claude-n-douba-7737bb342/" target="_blank">Mon LinkedIn</a>
+  </section>
 
-      <div class="r
+  <footer>
+    <p>© 2025 N'DOUBA JEAN-CLAUDE</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
