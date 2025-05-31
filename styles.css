@@ -1,166 +1,262 @@
-/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #f4f4f4; 
+    color: #333; /* Dark gray text */
     line-height: 1.6;
-    transition: background-color 0.5s ease;
 }
 
-body:hover {
-    background-color: #e6e6e6;
+html{
+    scroll-behavior: smooth;
 }
 
-/* Header */
+.theme-button{
+    margin-left:15px;
+    margin-bottom:15px;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.theme-toggle i {
+    color: #333; 
+}
+
+body.dark-mode .theme-toggle i {
+    color: white;
+}
+
+body.light-mode {
+    background-color: #f4f4f4; 
+    color: #333; 
+}
+
+body.dark-mode {
+    background-color: #000; 
+    color: white; 
+}
+
+body.light-mode .hero h1,
+body.light-mode .hero p {
+    color: #333; 
+}
+
+body.dark-mode .hero h1,
+body.dark-mode .hero p {
+    color: white;
+}
+body.light-mode nav {
+    color: #333; 
+}
+
+body.dark-mode nav {
+    color: white; 
+}
+
+body.light-mode nav a {
+    color: #333; 
+}
+
+body.dark-mode nav a {
+    color: white; 
+}
+
 header {
-    background: linear-gradient(to right, #35424a, #1f8ea1);
-    color: #fff;
-    padding: 30px 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease, transform 0.3s ease;
+    font-weight: 700;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #1f8ea1;
-    transform: scale(1.1);
+    color: #007bff; /* Blue color on hover */
 }
 
-/* Hero Section */
-#hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    padding: 100px 20px;
-    color: #fff;
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333; 
     text-align: center;
-    animation: fadeIn 2s ease;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
 }
 
-#hero h2 {
+.hero-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 500px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    margin:20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  
+.hero-picture{
+    height: 500px;
+    width: 400px;
+}
+
+.flip-card-inner {
+    position: relative;
+    height: 500px;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+ 
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    height: 500px;
+    width: 400px;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+  
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    height: 500px;
+    width: 400px;
+}
+
+.flip-card-back h1, .flip-card p{
+    margin: 10px;
+}
+
+.hero h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-#hero p {
+.hero p {
     font-size: 1.2em;
-    max-width: 700px;
-    margin: 0 auto;
-    font-style: italic;
+    margin-bottom: 40px;
+    text-align: justify;
 }
 
-/* Skills Section */
-#skills {
-    background-color: #fff;
-    padding: 40px 20px;
-    text-align: center;
-    animation: fadeInUp 1.5s ease;
-}
-
-#skills h2 {
-    margin-bottom: 30px;
-    font-size: 2.2em;
-}
-
-button {
-    background-color: #1f8ea1;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-/* Hover effect for skills buttons */
-button:hover {
-    transform: scale(1.1);
-    background-color: #16a085; /* Change to a different color on hover */
-}
-
-/* About Me Section */
-#hero h2 {
-    color: #e91e63; /* Change the text color */
-}
-
-#hero p {
-    background-color: #fefefe; /* Slight contrast with white background */
-    color: #333;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Projects Section */
-.project-card {
-    background: #ffffff;
-    border: 1px solid #ddd;
-    margin: 10px 0;
-    padding: 15px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    background: #f9f9f9;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Show More Details Button */
-.show-more {
-    background-color: #1f8ea1;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+.btn {
     display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff; /* Blue button */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+h2 {
     text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
 }
 
-.show-more:hover {
-    background-color: #16a085; /* Change color on hover */
-    transform: scale(1.05);
+.skills-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.skills-buttons button {
+    padding: 10px 20px;
+    background-color: #6ab04c; /* Green background for buttons */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.skills-buttons button:hover {
+    background-color: #4b8530; /* Darker green on hover */
 }
 
-/* Footer */
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
 footer {
+    background-color: #1C2940; /* Dark gray footer */
+    color: #fff; /* White text */
     text-align: center;
-    padding: 20px;
-    background: #35424a;
-    color: #ffffff;
+    /* padding: 20px 0; */
+}
+
+footer .contact-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #152136;
+}
+
+footer .sosmed {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    padding-bottom: 16px;
 }
