@@ -1,32 +1,29 @@
-// Smooth Scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    });
+const navbarButton = document.querySelector(".js-navbar-button");
+const navbar = document.querySelector(".js-navbar");
+const navbarLinks = document.querySelectorAll('a')
+let mobile = false;
+window.addEventListener("resize", () => {
+    const windowWidth = window.innerWidth;
+    if (windowWidth <= 815) {
+        navbarButton.classList.add('show');
+        navbar.classList.add('hide');
+        mobile = true;
+    } else {
+        navbarButton.classList.remove('show');
+        navbar.classList.remove('hide');
+        mobile = false;
+    }
+});
+navbarButton.addEventListener("click", () => {
+    navbar.classList.remove('hide');
+    navbarButton.classList.remove('show');
 });
 
-// Display a greeting based on the time of day
-function displayGreeting() {
-    const now = new Date();
-    const hours = now.getHours();
-    let greeting;
-
-    if (hours < 12) {
-        greeting = "Good Morning!";
-    } else if (hours < 18) {
-        greeting = "Good Afternoon!";
-    } else {
-        greeting = "Good Evening!";
-    }
-
-    document.getElementById('greeting').innerText = greeting;
-}
-
-// Call the function on page load
-window.onload = displayGreeting;
+navbarLinks.forEach(link => {
+    link.addEventListener('click',() => {
+        if (mobile) {
+            navbarButton.classList.add('show');
+            navbar.classList.add('hide');
+        }
+    })
+})
